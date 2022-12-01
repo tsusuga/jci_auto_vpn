@@ -1,7 +1,8 @@
 import pyautogui
 import time
 from dotenv import load_dotenv
-
+import os
+import webbrowser
 
 # winボタンプッシュ
 pyautogui.press('win')
