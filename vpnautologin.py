@@ -1,9 +1,6 @@
 import pyautogui
 import time
 from dotenv import load_dotenv
-import os
-import webbrowser
-import win32com.client
 
 
 # winボタンプッシュ
@@ -29,24 +26,3 @@ pyautogui.press('enter')
 
 # outlookを表示
 webbrowser.open("https://outlook.office.com/mail/")
-
-# time.sleep(20)
-
-# # outlookからPINを抽出する処理
-# outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
-# inbox = outlook.GetDefaultFolder(6)
-
-# # フォルダを取得
-# accounts = outlook.Folders('My account')
-# folders = accounts.Folders('受信トレイ').Folders('AuthCode')
-# mails = folders.Items
-
-# idx = len(mails)
-
-# mail = mails[idx - 1]
-# subject = mail.subject
-# pincode = subject[10:16]
-# print(pincode)
-
-# pyautogui.write(pincode)
-# pyautogui.press('enter')
